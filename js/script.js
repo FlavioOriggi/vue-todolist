@@ -4,16 +4,16 @@ const app = new Vue(
         data:{
             newList: '',
             list: [
-                'Studiare boolean',                
-                'fare pulizie casalinghe',
-                'Andare in palestra',
-                'Uscire a camminare'
+                
             ] 
         },
         methods: {
             addObligation(){
                 this.list.push(this.newList);
                 this.newList = '';
+            },
+            removeObligation(index){
+                this.list.splice(index,1);
             }
         }
 

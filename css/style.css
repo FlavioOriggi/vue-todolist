@@ -42,6 +42,7 @@ body{
     padding: 10px 20px;
     border-radius: 10px;
     border: 1px solid black;
+    font-size: 16px;
 }
 
 .list-container{
@@ -53,6 +54,9 @@ body{
 
 .list-container ul{
     list-style: none;
+}
+.text-empty-list{
+    color: rgb(83, 83, 83);
 }
 
 .list{

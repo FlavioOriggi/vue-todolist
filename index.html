@@ -17,17 +17,20 @@
 
         <div class="add-list">
             <h1 class="m_title">Organizza gli impegni quotidiani ed aumenta l'efficienza grazie alla nostra To Do List!</h1>
-            <h2 class="sub_title">Inserisci qui sotto, tutti i tuoi impegni/compiti. Ricordati di cacellarli una volta fatti!</h2>
-            <input type="text" placeholder="new obligation" v-model="newList" class="p_tag_x20">
-            <button @click="addObligation" >Aggiungi</button>
+            <h2 class="sub_title">Inserisci qui sotto, tutti i tuoi impegni/compiti</h2>
+            <input type="text" placeholder="scrivi qualcosa da fare" v-model="newList" class="p_tag_x20">
+            <button class="btn" @click="addObligation" >Aggiungi</button>
         </div>
 
         <div class="list-container">
-            <ul v-if="list.length > 0">
+            <h3 v-if="list.length == 0" class="text-empty-list">Qui verranno segnati tutti i tuoi impegni. Ricordati di cancellarli una volta fatti!</h3>
+
+            <ul v-else>
                 <li class="list clearfix" v-for="(item, index) in list">
                     {{index}} {{item}} <i class="fas fa-trash-alt" @click="removeObligation(index)"></i>
                 </li>                
             </ul>
+            <!-- <h2 v-else>Hai completato tutte le cose da fare!</h2> -->
         </div>
     </div>
     
