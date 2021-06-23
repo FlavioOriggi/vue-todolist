@@ -23,8 +23,10 @@
         </div>
 
         <div class="list-container">
-            <ul>
-                <li class="list clearfix">bla<i class="fas fa-trash-alt"></i></li>
+            <ul v-if="list.length > 0">
+                <li class="list clearfix" v-for="(item, index) in list">
+                    {{index}} {{item}} <i class="fas fa-trash-alt"></i>
+                </li>                
             </ul>
         </div>
     </div>

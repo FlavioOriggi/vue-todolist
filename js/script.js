@@ -9,7 +9,7 @@ const app = new Vue(
                 'Andare in palestra',
                 'Uscire a camminare'
             ] 
-        }
+        },
 
     }
 );
