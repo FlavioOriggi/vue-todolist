@@ -10,6 +10,12 @@ const app = new Vue(
                 'Uscire a camminare'
             ] 
         },
+        methods: {
+            addObligation(){
+                this.list.push(this.newList);
+                this.newList = '';
+            }
+        }
 
     }
 );
